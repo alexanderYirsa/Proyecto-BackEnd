@@ -8,48 +8,50 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.alexanderYirsa.app.entity.Clientes;
 import com.alexanderYirsa.app.entity.Usuarios;
+import com.alexanderYirsa.app.repository.ClientesRepository;
 import com.alexanderYirsa.app.repository.UsuariosRepository;
 
 @Service
-public class UsuariosServiceImpl implements UsuariosService{
+public class ClientesServiceImpl implements ClientesService{
 
 	@Autowired
-	private UsuariosRepository userResRepository;
+	private ClientesRepository clienteResRepository;
 	
 	@Override
 	@Transactional(readOnly = true)
-	public Iterable<Usuarios> findAll() {
+	public Iterable<Clientes> findAll() {
 		
-		return userResRepository.findAll();
+		return clienteResRepository.findAll();
 	}
 	
 	@Override
 	@Transactional(readOnly = true)
-	public Page<Usuarios> findAll(Pageable pageable) {
+	public Page<Clientes> findAll(Pageable pageable) {
 		
-		return userResRepository.findAll(pageable);
+		return clienteResRepository.findAll(pageable);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Optional<Usuarios> findById(Long id) {
+	public Optional<Clientes> findById(Long id) {
 		
-		return userResRepository.findById(id);
+		return clienteResRepository.findById(id);
 	}
 
 	@Override
 	@Transactional
-	public Usuarios save(Usuarios user) {
+	public Clientes save(Clientes user) {
 		
-		return userResRepository.save(user);
+		return clienteResRepository.save(user);
 	}
 
 	@Override
 	@Transactional
 	public void deleteById(Long id) {
 		
-		userResRepository.deleteById(id);
+		clienteResRepository.deleteById(id);
 	}
 
 }

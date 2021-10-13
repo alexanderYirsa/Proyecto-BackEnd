@@ -12,15 +12,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name="usuarios")
 public class Usuarios implements Serializable{
-	
-	
+
 	private static final long serialVersionUID = 4546261564824683433L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long cedula_usuario;
 	@Column(length = 50)
 	private String nombre_usuario;
-	@Column(name="mail", nullable=false, length= 50, unique=true)
+	@Column(nullable=false, length= 50, unique=true)
 	private String email_usuario;
 	private String usuario;
 	private String password;
