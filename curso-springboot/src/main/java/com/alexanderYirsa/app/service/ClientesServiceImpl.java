@@ -9,9 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.alexanderYirsa.app.entity.Clientes;
-import com.alexanderYirsa.app.entity.Usuarios;
 import com.alexanderYirsa.app.repository.ClientesRepository;
-import com.alexanderYirsa.app.repository.UsuariosRepository;
+
 
 @Service
 public class ClientesServiceImpl implements ClientesService{
