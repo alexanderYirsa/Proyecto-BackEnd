@@ -15,7 +15,7 @@ public class Usuarios implements Serializable{
 
 	private static final long serialVersionUID = 4546261564824683433L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long cedula_usuario;
 	@Column(length = 50)
 	private String nombre_usuario;

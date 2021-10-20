@@ -12,9 +12,9 @@ public class DetalleVentas {
 	
 	private int cantidad_producto;
 	
-	//@ManyToOne (optional = false)
-	//@JoinColumn(name = "producto_venta", referencedColumnName = "codigo_producto")
-	//private Productos producto;
+	@ManyToOne (optional = false)
+	@JoinColumn(name = "producto_venta", referencedColumnName = "codigo_producto")
+	private Productos producto;
 	
 	@ManyToOne (optional = false)
 	@JoinColumn(name = "codigo_venta_detalle", referencedColumnName = "codigo_venta")
